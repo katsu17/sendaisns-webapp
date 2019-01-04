@@ -9,12 +9,18 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
+import { EditComponent } from './edit/edit.component';
+import { PostComponent } from './post/post.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MainNavComponent
+    MainNavComponent,
+    EditComponent,
+    PostComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +34,9 @@ import { RouterModule, Routes } from '@angular/router';
     MatListModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
+      { path: 'post', component: PostComponent },
+      { path: 'edit', component: EditComponent },
+      { path: 'profile', component: ProfileComponent },
     ]),
   ],
   providers: [],
